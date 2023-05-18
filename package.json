@@ -1,4 +1,6 @@
 {
+  "name": "matomo-tracker",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "npm run build:ts && npm run build:ts:es",
@@ -10,9 +12,9 @@
     "test": "jest",
     "prettier": "prettier --write ./packages/**/**/*.{ts,tsx}",
     "prepublishOnly": "npm run build",
-    "postinstall": "lerna link",
-    "publish:canary": "lerna publish --canary",
-    "publish:stable": "lerna publish"
+    "postinstall": "sudo lerna link",
+    "publish:canary": "sudo lerna publish --canary",
+    "publish:stable": "sudo lerna publish"
   },
   "workspaces": [
     "packages/*"

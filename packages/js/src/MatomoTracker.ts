@@ -103,7 +103,9 @@ class MatomoTracker {
   }
 
   enableLinkTracking(active: boolean): void {
-    this.pushInstruction('enableLinkTracking', active)
+    if (active) {
+      this.pushInstruction('enableLinkTracking')
+    }
   }
 
   private trackEventsForElements(elements: HTMLElement[]) {
